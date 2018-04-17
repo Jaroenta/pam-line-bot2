@@ -38,6 +38,11 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text='สวัสดีค่า'))
         return 0
+    if event.message.text == "หวัดดี":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='หวัดดีค่ะ'))
+        return 0
     if event.message.text == "สบายดีมั้ย":
         line_bot_api.reply_message(
             event.reply_token,
@@ -53,6 +58,37 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text='เหงาก็คุยกับเราก่อน'))
         return 0
+    if event.message.text == "ทำไรอยู่":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='คุยกะเธอไง'))
+        return 0
+    if event.message.text == "แชทบอทคืออะไร":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='แชทบอทก็คือ โปรแกรมที่ตอบกลับข้อความกลับอัตโนมัติยังไงหล่ะ'))
+        return 0
+    if event.message.text == 'ชื่ออะไร':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='ชื่อแพมค่ะ'))
+        return 0
+    if event.message.text == 'ร้อนอะ':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='ลองหาอะไรเย็นๆกินดีมั้ย'))
+        return 0
+    if event.message.text == 'เบื่อมั้ย':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='ไม่เบื่อเลย เราชอบคุย'))
+        return 0
+    if event.message.text == 'ขอบคุณนะ':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='ยินดีค่ะ'))
+        return 0
+    
 
 if __name__ == "__main__":
     app.run()
