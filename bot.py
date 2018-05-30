@@ -10,7 +10,7 @@ handler = WebhookHandler('1399713ea85d45b90aad749b8565be5d')
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "this is chatbot sever!"
 
 @app.route("/webhook", methods=['POST'])
 def webhook():
@@ -88,7 +88,12 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text='ยินดีค่ะ'))
         return 0
-    
+    if event.message.text == 'รู้ภาษาคนได้ไง':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='ก็ให้เธอช่วยคุยกับเราไง'))
+        return 0  
+
 
 if __name__ == "__main__":
     app.run()
